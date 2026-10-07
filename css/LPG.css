@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+.fundo {
+    background-color:rgb(146, 146, 146) ;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding-top: 68px;
+}
+
+.boxcentral {
+    background-color:#F4F1E8;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 1px;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.cardlogo {   
+    width: 400px;
+    overflow: hidden;
+}
+
+.cardlogo-img {
+    width: 350;
+    height: 350;
+    object-fit:cover;
+    display: block;
+}
+.cardlogocontent {
+    font-size: 18px;
+    line-height: 2;
+    color: rgb(0, 0, 0);
+    width: 90%;
+    transition: 0.5s;
+    margin: 10px;
+    padding: 10px;
+}
+
+.cardcontent h2 {
+    margin-top: 0;
+    font-family: fantasy;
+
+}
