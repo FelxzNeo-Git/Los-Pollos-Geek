@@ -4,12 +4,12 @@ exigir_login();
 
 $usuario = buscarUsuarioPorId((int) $_SESSION['usuario_id']);
 if (!$usuario) {
-    // Conta apagada: encerra a sessão
+    // conta apagada: encerra a sessão
     header('Location: ../index.php?logout');
     exit;
 }
 
-// Alterar a permissão de localização
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_validar();
     atualizarLocalizacao((int) $usuario['id'], ($_POST['permitir_localizacao'] ?? '') === 'sim');

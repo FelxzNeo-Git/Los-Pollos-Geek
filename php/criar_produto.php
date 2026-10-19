@@ -6,7 +6,7 @@ $erros  = flash('erros') ?? [];
 $antigo = flash('antigo') ?? [];
 $todas  = categorias();
 
-// Pré-seleciona a categoria vinda do link (?c=slug) ou do formulário anterior
+
 $catSel = $antigo['categoria'] ?? '';
 if ($catSel === '' && isset($_GET['c'])) {
     $c = categoria_por_slug((string) $_GET['c']);

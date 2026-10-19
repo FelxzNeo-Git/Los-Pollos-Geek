@@ -1,16 +1,11 @@
 <?php
-/**
- * Armazenamento em arquivos JSON (sem banco de dados).
- * Os dados ficam em /data e sobrevivem a logout/fim de sessão.
- */
+
 
 if (!defined('RAIZ')) {
     define('RAIZ', dirname(__DIR__, 2));
 }
 const DIR_DATA    = RAIZ . '/data';
 const DIR_UPLOADS = RAIZ . '/uploads';
-
-/** Lê um JSON com lock compartilhado. Devolve $padrao se não existir/for inválido. */
 function json_ler(string $arquivo, array $padrao = []): array
 {
     if (!is_file($arquivo) || !($fp = fopen($arquivo, 'rb'))) {
@@ -25,11 +20,7 @@ function json_ler(string $arquivo, array $padrao = []): array
     return is_array($dados) ? $dados : $padrao;
 }
 
-/**
- * Lê, altera e grava o JSON dentro de um único lock exclusivo
- * (evita que dois acessos simultâneos sobrescrevam um ao outro).
- * $alterar recebe o array atual e devolve o novo; devolver null cancela a gravação.
- */
+
 function json_atualizar(string $arquivo, array $padrao, callable $alterar): bool
 {
     if (!is_dir(dirname($arquivo)) && !mkdir(dirname($arquivo), 0755, true)) {

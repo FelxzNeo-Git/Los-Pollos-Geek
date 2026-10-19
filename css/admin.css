@@ -1,29 +1,140 @@
-/* Painel e formulários de admin (usa as variáveis do estilo.css) */
 
-.admin-main { max-width: 620px; margin: 0 auto; padding: 28px 20px 44px; }
-.admin-largo { max-width: 860px; }
-.admin-acoes { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 22px; }
 
-.admin-bloco { margin-bottom: 16px; padding: 10px 16px; border: var(--borda); border-radius: 8px; }
-.admin-linha { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 0; }
-.admin-cat { font-size: 1.1rem; border-bottom: var(--borda); }
-.admin-cat a { color: var(--marinho); text-decoration: none; }
-.admin-prod { padding-left: 12px; }
-.adm-acoes { display: flex; align-items: center; gap: 14px; font-weight: 700; }
-.admin-linha form, .adm-acoes form { margin: 0; }
-.vazio-min { margin: 6px 0; color: #666; }
+.admin-main {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 28px 20px 44px;
+}
 
-.box { padding: 22px; border: var(--borda); border-radius: 8px; }
-.box label { display: block; margin: 14px 0 4px; font-weight: 700; }
-.box label small { font-weight: 400; color: #666; }
-.box input[type=text], .box select, .box textarea { width: 100%; padding: 9px; font: inherit; border: 1px solid #aab2c5; border-radius: 6px; }
-.box textarea { resize: vertical; }
-.box .btn { width: 100%; margin-top: 20px; padding: 11px; }
-.box .link { display: block; margin-top: 14px; text-align: center; }
+.admin-largo {
+    max-width: 860px;
+}
 
-.erros { margin: 12px 0; padding: 8px 14px; background: #fde6e7; border-radius: 6px; }
-.erros p { margin: 4px 0; }
+.admin-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0 22px;
+}
 
-.upload { display: block; padding: 14px; text-align: center; color: #666; background: var(--cinza); border: 1px dashed #aab2c5; border-radius: 6px; cursor: pointer; }
-.upload input { display: none; }
-.upload img { display: none; max-height: 160px; margin: 10px auto 0; border-radius: 6px; }
+.admin-bloco {
+    margin-bottom: 16px;
+    padding: 10px 16px;
+    border: var(--borda);
+    border-radius: 8px;
+}
+
+.admin-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 6px 0;
+}
+
+.admin-cat {
+    font-size: 1.1rem;
+    border-bottom: var(--borda);
+}
+
+.admin-cat a {
+    color: var(--marinho);
+    text-decoration: none;
+}
+
+.admin-prod {
+    padding-left: 12px;
+}
+
+.adm-acoes {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 700;
+}
+
+.admin-linha form,
+.adm-acoes form {
+    margin: 0;
+}
+
+.vazio-min {
+    margin: 6px 0;
+    color: #666;
+}
+
+.box {
+    padding: 22px;
+    border: var(--borda);
+    border-radius: 8px;
+}
+
+.box label {
+    display: block;
+    margin: 14px 0 4px;
+    font-weight: 700;
+}
+
+.box label small {
+    font-weight: 400;
+    color: #666;
+}
+
+.box input[type=text],
+.box select,
+.box textarea {
+    width: 100%;
+    padding: 9px;
+    font: inherit;
+    border: 1px solid #aab2c5;
+    border-radius: 6px;
+}
+
+.box textarea {
+    resize: vertical;
+}
+
+.box .btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 11px;
+}
+
+.box .link {
+    display: block;
+    margin-top: 14px;
+    text-align: center;
+}
+
+.erros {
+    margin: 12px 0;
+    padding: 8px 14px;
+    background: #fde6e7;
+    border-radius: 6px;
+}
+
+.erros p {
+    margin: 4px 0;
+}
+
+.upload {
+    display: block;
+    padding: 14px;
+    text-align: center;
+    color: #666;
+    background: var(--cinza);
+    border: 1px dashed #aab2c5;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.upload input {
+    display: none;
+}
+
+.upload img {
+    display: none;
+    max-height: 160px;
+    margin: 10px auto 0;
+    border-radius: 6px;
+}

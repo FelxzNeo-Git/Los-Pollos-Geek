@@ -1,8 +1,5 @@
 <?php
-/**
- * Lista de produtos: todos (produtos.php) ou de uma categoria (categoria.php).
- * Variável esperada: $categoriaAtual (array da categoria ou null).
- */
+
 exigir_acesso();
 
 $categoriaAtual = $categoriaAtual ?? null;

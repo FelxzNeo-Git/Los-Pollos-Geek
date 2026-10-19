@@ -7,7 +7,7 @@ $nome      = trim($_POST['nome'] ?? '');
 $descricao = trim($_POST['descricao'] ?? '');
 $catId     = trim($_POST['categoria'] ?? '');
 $valor     = paraNumero($_POST['valor'] ?? '');
-$valorAnt  = paraNumero($_POST['valor_antigo'] ?? ''); // opcional
+$valorAnt  = paraNumero($_POST['valor_antigo'] ?? ''); 
 
 $erros = [];
 if (mb_strlen($nome) < 3 || mb_strlen($nome) > 80) {

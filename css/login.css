@@ -1,44 +1,149 @@
-/* Login e cadastro: GIF de um lado, formulário do outro */
 
-:root { --azul: #1b78d0; --marinho: #14235a; --vermelho: #d3141f; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: 'Nunito', Arial, sans-serif; color: #222; }
 
-.auth { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
-.auth-arte { background: center / cover no-repeat; }
-.auth-login .auth-arte { background-image: url('../img/fundo-login.gif'); background-color: #aea4d2; }
-.auth-cadastro .auth-arte { background-image: url('../img/fundo-cadastro.gif'); background-color: #316cc2; }
+:root {
+    --azul: #1b78d0;
+    --marinho: #14235a;
+    --vermelho: #d3141f;
+}
 
-.auth-form { display: flex; flex-direction: column; justify-content: center; width: 100%; max-width: 420px; margin: 0 auto; padding: 32px 24px; }
-.auth-logo { align-self: center; width: 110px; margin-bottom: 6px; }
-.auth-form h1 { margin: 0; font-size: 2rem; color: var(--marinho); }
-.auth-sub { margin: 0 0 12px; color: #666; }
+* {
+    box-sizing: border-box;
+}
 
-.auth-form label { display: block; margin: 12px 0 4px; font-weight: 700; }
-.auth-form input[type=email], .auth-form input[type=text], .auth-form input[type=password] {
+body {
+    margin: 0;
+    font-family: 'Nunito', Arial, sans-serif;
+    color: #222;
+}
+
+.auth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.auth-arte {
+    background: center / cover no-repeat;
+}
+
+.auth-login .auth-arte {
+    background-image: url('../img/fundo-login.gif');
+    background-color: #aea4d2;
+}
+
+.auth-cadastro .auth-arte {
+    background-image: url('../img/fundo-cadastro.gif');
+    background-color: #316cc2;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.auth-logo {
+    align-self: center;
+    width: 110px;
+    margin-bottom: 6px;
+}
+
+.auth-form h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--marinho);
+}
+
+.auth-sub {
+    margin: 0 0 12px;
+    color: #666;
+}
+
+.auth-form label {
+    display: block;
+    margin: 12px 0 4px;
+    font-weight: 700;
+}
+
+.auth-form input[type=email],
+.auth-form input[type=text],
+.auth-form input[type=password] {
     width: 100%;
     padding: 10px;
     font: inherit;
     border: 1px solid #aab2c5;
     border-radius: 6px;
 }
-.auth-form input:focus { outline: 2px solid var(--azul); }
 
-.localizacao { margin: 16px 0 0; padding: 10px 14px; border: 1px solid #aab2c5; border-radius: 6px; }
-.localizacao legend { padding: 0 6px; font-weight: 700; }
-.localizacao p { margin: 0 0 4px; font-size: 0.9rem; color: #666; }
-.localizacao label { display: inline-block; margin: 4px 16px 0 0; font-weight: 400; }
-
-.btn-acessar { width: 100%; margin-top: 20px; padding: 11px; font: 700 1rem 'Nunito', Arial, sans-serif; color: #fff; background: var(--vermelho); border: 0; border-radius: 6px; cursor: pointer; }
-.btn-acessar:hover { background: #b50f19; }
-.auth-troca { margin: 18px 0 0; text-align: center; }
-.auth-troca a { color: var(--azul); font-weight: 700; }
-
-.msg { margin: 0 0 8px; padding: 9px 14px; border-radius: 6px; }
-.msg-erro { background: #fde6e7; }
-.msg-sucesso { background: #e6f5e8; }
-
-@media (max-width: 800px) {
-    .auth { grid-template-columns: 1fr; }
-    .auth-arte { display: none; }
+.auth-form input:focus {
+    outline: 2px solid var(--azul);
 }
+
+.localizacao {
+    margin: 16px 0 0;
+    padding: 10px 14px;
+    border: 1px solid #aab2c5;
+    border-radius: 6px;
+}
+
+.localizacao legend {
+    padding: 0 6px;
+    font-weight: 700;
+}
+
+.localizacao p {
+    margin: 0 0 4px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.localizacao label {
+    display: inline-block;
+    margin: 4px 16px 0 0;
+    font-weight: 400;
+}
+
+.btn-acessar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 11px;
+    font: 700 1rem 'Nunito', Arial, sans-serif;
+    color: #fff;
+    background: var(--vermelho);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-acessar:hover {
+    background: #b50f19;
+}
+
+.auth-troca {
+    margin: 18px 0 0;
+    text-align: center;
+}
+
+.auth-troca a {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+.msg {
+    margin: 0 0 8px;
+    padding: 9px 14px;
+    border-radius: 6px;
+}
+
+.msg-erro {
+    background: #fde6e7;
+}
+
+.msg-sucesso {
+    background: #e6f5e8;
+}
+

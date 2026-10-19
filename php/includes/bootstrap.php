@@ -1,16 +1,9 @@
 <?php
-/**
- * Inicialização comum: sessão, helpers, autenticação, catálogo (categorias/produtos) e carrinho.
- *
- * Caminhos: as páginas dentro de /php usam asset() e pg() para montar links certos.
- * O index.php (na raiz) define NA_RAIZ antes de chamar este arquivo.
- */
 
 require_once __DIR__ . '/../config.php';
 
 const ARQ_CATALOGO = DIR_DATA . '/catalogo.json';
 
-/** Categorias que já vêm prontas na primeira execução. O admin pode criar outras ou excluir estas. */
 const CATALOGO_BASE = [
     'categorias' => [
         ['id' => 'action-figures', 'slug' => 'action-figures', 'nome' => 'Action Figures', 'descricao' => 'Bonecos articulados e estátuas de animes, games, filmes e quadrinhos.', 'imagem' => null, 'criado' => 1],
@@ -22,23 +15,18 @@ const CATALOGO_BASE = [
     'produtos' => [],
 ];
 
-/* ------------------------------------------------------------------ */
-/*  Caminhos                                                           */
-/* ------------------------------------------------------------------ */
 
-/** Caminho de um arquivo da raiz do site (css, js, img, uploads) a partir da página atual. */
 function asset(string $caminho): string
 {
     return (defined('NA_RAIZ') ? '' : '../') . $caminho;
 }
 
-/** Caminho de uma página da pasta /php a partir da página atual. */
+
 function pg(string $pagina): string
 {
     return (defined('NA_RAIZ') ? 'php/' : '') . $pagina;
 }
 
-/** Página atual, no formato que o carrinho.php aceita para voltar depois de adicionar um item. */
 function voltar_atual(): string
 {
     if (defined('NA_RAIZ')) {
@@ -49,9 +37,6 @@ function voltar_atual(): string
     return $arquivo . ($query !== '' ? '?' . $query : '');
 }
 
-/* ------------------------------------------------------------------ */
-/*  Helpers gerais                                                     */
-/* ------------------------------------------------------------------ */
 function e(?string $s): string
 {
     return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8');
@@ -68,7 +53,6 @@ function ir(string $url): never
     exit;
 }
 
-/** Converte "4.890,00", "R$ 4890,00" ou "4890.00" em float (null se inválido). */
 function paraNumero(string $v): ?float
 {
     $v = trim(str_ireplace(['R$', ' '], '', $v));
@@ -92,9 +76,6 @@ function slug(string $texto): string
     return trim($texto, '-') ?: 'item';
 }
 
-/* ------------------------------------------------------------------ */
-/*  Flash (mensagens/dados antigos de formulário) e CSRF               */
-/* ------------------------------------------------------------------ */
 function flash(string $chave, mixed $valor = null): mixed
 {
     if ($valor !== null) {
@@ -126,9 +107,6 @@ function csrf_validar(): void
     }
 }
 
-/* ------------------------------------------------------------------ */
-/*  Autenticação                                                       */
-/* ------------------------------------------------------------------ */
 function logado(): bool
 {
     return !empty($_SESSION['usuario_id']);
@@ -146,7 +124,6 @@ function exigir_login(): void
     }
 }
 
-/** Páginas de navegação da loja: pedem login só se LOJA_PUBLICA for false. */
 function exigir_acesso(): void
 {
     if (!LOJA_PUBLICA) {
@@ -163,9 +140,7 @@ function exigir_admin(): void
     }
 }
 
-/* ------------------------------------------------------------------ */
-/*  Catálogo                                                           */
-/* ------------------------------------------------------------------ */
+
 function catalogo(): array
 {
     return json_ler(ARQ_CATALOGO, CATALOGO_BASE);
@@ -216,7 +191,7 @@ function contar_produtos(string $categoriaId): int
     return count(produtos_da_categoria($categoriaId));
 }
 
-/** Produtos mais novos primeiro (opcionalmente só de uma categoria e/ou limitados). */
+
 function produtos_recentes(?int $limite = null, ?string $categoriaId = null): array
 {
     $lista = $categoriaId === null ? catalogo()['produtos'] : produtos_da_categoria($categoriaId);
@@ -231,10 +206,7 @@ function nome_categoria(string $id): string
     return $mapa[$id] ?? '';
 }
 
-/**
- * Imagem da categoria: a enviada pelo admin ou, se não houver, um arquivo em img/categorias/<slug>.png
- * (ex.: img/categorias/funko-pop.png). Sem nenhuma das duas, devolve null e a loja mostra só o nome.
- */
+
 function imagem_categoria(array $cat): ?string
 {
     if (!empty($cat['imagem'])) {
@@ -244,7 +216,7 @@ function imagem_categoria(array $cat): ?string
     return is_file(RAIZ . '/' . $arquivo) ? asset($arquivo) : null;
 }
 
-/** URL pública de um arquivo enviado. */
+
 function url_upload(?string $arquivo): string
 {
     return $arquivo ? asset('uploads/' . rawurlencode($arquivo)) : '';
@@ -258,10 +230,6 @@ function apagar_upload(?string $arquivo): void
     }
 }
 
-/**
- * Valida e salva uma imagem enviada. Devolve o nome do arquivo salvo ou null (e preenche $erro).
- * Se $obrigatoria for false e nenhum arquivo for enviado, devolve null sem erro.
- */
 function salvar_imagem(?array $arquivo, bool $obrigatoria, ?string &$erro): ?string
 {
     $erro = null;
@@ -299,12 +267,6 @@ function salvar_imagem(?array $arquivo, bool $obrigatoria, ?string &$erro): ?str
     }
     return $nome;
 }
-
-/* ------------------------------------------------------------------ */
-/*  Carrinho (sessão)                                                  */
-/* ------------------------------------------------------------------ */
-
-/** Quantidade de itens no carrinho (ignora produtos que já foram excluídos). */
 function carrinho_qtd(): int
 {
     $ids = array_column(catalogo()['produtos'], 'id');
@@ -317,9 +279,6 @@ function carrinho_qtd(): int
     return $qtd;
 }
 
-/* ------------------------------------------------------------------ */
-/*  Componente: card de produto (usado na home, listagens e relacionados) */
-/* ------------------------------------------------------------------ */
 function card_produto(array $p): string
 {
     $desconto = !empty($p['valor_antigo']) ? (int) round((1 - $p['valor'] / $p['valor_antigo']) * 100) : 0;

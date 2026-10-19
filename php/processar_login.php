@@ -18,7 +18,7 @@ if ($email === '' || $senha === '') {
 $usuario = buscarUsuarioPorEmail($email);
 
 if ($usuario && password_verify($senha, $usuario['senha'])) {
-    session_regenerate_id(true); // evita fixação de sessão
+    session_regenerate_id(true); 
     $_SESSION['usuario_id']    = $usuario['id'];
     $_SESSION['usuario_nome']  = $usuario['nome'];
     $_SESSION['usuario_admin'] = !empty($usuario['admin']);

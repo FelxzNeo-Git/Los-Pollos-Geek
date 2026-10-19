@@ -1,9 +1,5 @@
 <?php
-/**
- * Cabeçalho comum a todas as páginas da loja.
- * Variáveis esperadas: $titulo (string) e, opcionalmente, $css (array de css extras)
- * e $categoriaAtual (categoria aberta, para destacar no menu).
- */
+
 $css            = $css ?? [];
 $categoriaAtual = $categoriaAtual ?? null;
 $qtdCarrinho    = carrinho_qtd();

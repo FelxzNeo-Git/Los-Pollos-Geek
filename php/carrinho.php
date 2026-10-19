@@ -4,26 +4,23 @@ exigir_login();
 
 $cat = catalogo();
 
-// Indexa os produtos por ID para acesso direto
 $produtos = [];
 foreach ($cat['produtos'] ?? [] as $p) {
     $produtos[(string) $p['id']] = $p;
 }
-
-/** Só aceita voltar para páginas da própria loja (ex.: "produtos.php?c=pokemon" ou "../index.php"). */
 function destino_seguro(string $url, string $padrao): string
 {
     return preg_match('~^(\.\./)?[a-z_]+\.php(\?[A-Za-z0-9_=&%.+\-]*)?$~', $url) ? $url : $padrao;
 }
 
-// Ações do carrinho
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_validar();
 
     $acao   = $_POST['acao'] ?? '';
     $voltar = destino_seguro((string) ($_POST['voltar'] ?? ''), 'carrinho.php');
 
-    // Pagamento
+
     if ($acao === 'pagar') {
         $itens = $_SESSION['carrinho'] ?? [];
         $totalPedido = 0;
@@ -35,8 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if ($totalPedido > 0) {
-            // Aqui entraria a integração real (Mercado Pago, Stripe, etc.)
-            // e o registro do pedido no banco.
             $_SESSION['pedido_ok'] = $totalPedido;
             $_SESSION['carrinho'] = [];
         }
@@ -44,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ir('carrinho.php');
     }
 
-    // Adicionar (vindo do catálogo), mais, menos e remover
     $id = (string) ($_POST['id'] ?? '');
 
     if (isset($produtos[$id])) {
@@ -81,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ir($voltar);
 }
 
-// Mensagem de pedido concluído (mostrada uma vez)
+
 $pedidoOk = $_SESSION['pedido_ok'] ?? null;
 unset($_SESSION['pedido_ok']);
 

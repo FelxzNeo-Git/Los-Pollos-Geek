@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "nome": "Administrador",
+        "email": "admin@lospollosgeek.com",
+        "senha": "$2y$10$Bvrxk5KtflzDctSUr2HVcu4K5I4L.7A9DZw5WwYB9vGUpSb3g7tLq",
+        "admin": true
+    }
+]

@@ -1,0 +1,276 @@
+{
+    "categorias": [
+        {
+            "id": "action-figures",
+            "slug": "action-figures",
+            "nome": "Action Figures",
+            "descricao": "Bonecos articulados e estátuas de animes, games, filmes e quadrinhos.",
+            "imagem": null,
+            "criado": 1
+        },
+        {
+            "id": "funko-pop",
+            "slug": "funko-pop",
+            "nome": "Funko Pop",
+            "descricao": "Os bonequinhos de cabeça grande dos seus personagens favoritos.",
+            "imagem": null,
+            "criado": 2
+        },
+        {
+            "id": "camisetas",
+            "slug": "camisetas",
+            "nome": "Camisetas",
+            "descricao": "Camisetas estampadas com séries, filmes, animes e games.",
+            "imagem": null,
+            "criado": 3
+        },
+        {
+            "id": "acessorios",
+            "slug": "acessorios",
+            "nome": "Acessórios",
+            "descricao": "Canecas, chaveiros, mochilas, luminárias e outros itens para o dia a dia.",
+            "imagem": null,
+            "criado": 4
+        },
+        {
+            "id": "pokemon",
+            "slug": "pokemon",
+            "nome": "Pokémon",
+            "descricao": "Pelúcias, cartas, figures e tudo de Pokémon.",
+            "imagem": null,
+            "criado": 5
+        }
+    ],
+    "produtos": [
+        {
+            "id": "b64be6089fcf",
+            "categoria": "funko-pop",
+            "nome": "Funko Pop! One Piece - Monkey D. Luffy #1877 (Funko Exclusive)",
+            "descricao": "Figura colecionável de vinil da linha POP! Animation. Edição especial exclusiva (Funko Exclusive nº 1877) retratando o personagem Monkey D. Luffy enfaixado e segurando seu chapéu de palha. Tamanho aproximado: 10 cm.",
+            "valor": 149.9,
+            "valor_antigo": 189.9,
+            "imagem": "89153a7946c744c7.webp",
+            "criado": 1792149907
+        },
+        {
+            "id": "64980f2a50e8",
+            "categoria": "action-figures",
+            "nome": "Action Figure S.H.Figuarts Naruto Uzumaki - The Jinchuriki Entrusted with Hope",
+            "descricao": "Figura de ação articulada detalhada do Naruto Uzumaki. Inclui rostos e mãos intercambiáveis, além do efeito de Rasengan. Material: PVC e ABS. Tamanho: 14 cm.",
+            "valor": 389.9,
+            "valor_antigo": 459.9,
+            "imagem": "43f222d83ad800f2.webp",
+            "criado": 1792150119
+        },
+        {
+            "id": "4667db580d3d",
+            "categoria": "camisetas",
+            "nome": "Camiseta Manga Curta Dragon Ball Z - Goku Super Saiyajin",
+            "descricao": "Camiseta 100% algodão penteado com estampa em alta resolução de Goku Super Saiyajin. Modelagem unissex com costura reforçada",
+            "valor": 69.9,
+            "valor_antigo": 89.9,
+            "imagem": "57558f1611636a05.webp",
+            "criado": 1792150676
+        },
+        {
+            "id": "ec68e1c38fdc",
+            "categoria": "acessorios",
+            "nome": "Chaveiro Metal Réplica Espada Zoro - Wado Ichimonji (One Piece)",
+            "descricao": "Chaveiro metálico colecionável em liga de zinco com bainha de proteção. Réplica inspirada na katana Wado Ichimonji do personagem Zoro. Comprimento: 12 cm.",
+            "valor": 39.9,
+            "valor_antigo": 49.9,
+            "imagem": "8c243cc5bcacfde7.jpg",
+            "criado": 1792150802
+        },
+        {
+            "id": "ceb864e93bf8",
+            "categoria": "pokemon",
+            "nome": "Pelúcia Pokémon Pikachu Fantasia Snorlax 21cm",
+            "descricao": "Pelúcia oficial com acabamento em tecido aveludado e antialérgico. Detalhes do rosto e cauda bordados com alta precisão. Altura: 25 cm.",
+            "valor": 89.9,
+            "valor_antigo": null,
+            "imagem": "9d1fb8cf7e2a7d08.webp",
+            "criado": 1792150912
+        },
+        {
+            "id": "749e3d041a19",
+            "categoria": "funko-pop",
+            "nome": "Funko Pop! Harry Potter - Harry Potter #01 Gold Exclusive",
+            "descricao": "Figura de vinil colecionável da linha POP! Movies. Edição especial dourada comemorativa do bruxo Harry Potter segurando sua varinha. Acompanha caixa original colecionável.",
+            "valor": 179.9,
+            "valor_antigo": 199.9,
+            "imagem": "a24b0b2453aa9e46.jpg",
+            "criado": 1792151586
+        },
+        {
+            "id": "62e9f6e28304",
+            "categoria": "funko-pop",
+            "nome": "Funko Pop! Marvel Spider-Man: No Way Home - Integrated Suit #913",
+            "descricao": "Figura em vinil colecionável baseada no filme Homem-Aranha: Sem Volta Para Casa. Detalhes do traje integrado com suporte de acrílico transparente simulando pose de ação.",
+            "valor": 139.9,
+            "valor_antigo": 169.9,
+            "imagem": "34e310ab600e964a.jpg",
+            "criado": 1792151707
+        },
+        {
+            "id": "e64b63817a05",
+            "categoria": "funko-pop",
+            "nome": "Funko Pop! Deluxe DC Comics - Batman: A Série Animada #549",
+            "descricao": "Edição especial Deluxe do Batman sobre o gárgula de Gotham City inspirado na clássica série animada dos anos 90. Material: Vinil.",
+            "valor": 229.9,
+            "valor_antigo": 279.9,
+            "imagem": "894ce16f8586775b.jpg",
+            "criado": 1792151769
+        },
+        {
+            "id": "0a92d4d195e3",
+            "categoria": "funko-pop",
+            "nome": "Funko Pop! Animation Demon Slayer - Tanjiro Kamado #867",
+            "descricao": "Figura de vinil do protagonista Tanjiro Kamado empunhando sua katana Nichirin em postura de combate com haori xadrez verde e preto.",
+            "valor": 129.9,
+            "valor_antigo": 159.9,
+            "imagem": "52b5b4c0114da5c2.jpg",
+            "criado": 1792151825
+        },
+        {
+            "id": "edaac7534e51",
+            "categoria": "action-figures",
+            "nome": "Action Figure S.H.Figuarts Dragon Ball Super - Goku Super Saiyan God Super Saiya",
+            "descricao": "Figura premium altamente articulada produzida pela Bandai Tamashii Nations. Acompanha várias expressões faciais e pares de mãos intercambiáveis.",
+            "valor": 349.9,
+            "valor_antigo": 489.9,
+            "imagem": "77d3410fb4fcf74a.jpg",
+            "criado": 1792152028
+        },
+        {
+            "id": "a4095c60b748",
+            "categoria": "action-figures",
+            "nome": "Action Figure Nendoroid Demon Slayer - Nezuko Kamado #1194",
+            "descricao": "Figura articulada estilo chibi da Good Smile Company. Inclui a caixa de madeira que Tanjiro carrega, partes de efeito e expressões intercambiáveis.",
+            "valor": 349.9,
+            "valor_antigo": 449.9,
+            "imagem": "54f82323202a45d6.jpg",
+            "criado": 1792152089
+        },
+        {
+            "id": "1b479f7cee67",
+            "categoria": "camisetas",
+            "nome": "Camiseta Estampada Attack on Titan - Scout Regiment Logo",
+            "descricao": "Camiseta confeccionada em tecido 100% algodão na cor chumbo. Possui estampa do brasão da Divisão de Reconhecimento no peito.",
+            "valor": 64.9,
+            "valor_antigo": 89.9,
+            "imagem": "5b110c55dd11dc3b.jpg",
+            "criado": 1792152150
+        },
+        {
+            "id": "e446a9913ac9",
+            "categoria": "camisetas",
+            "nome": "Camiseta Masculina Star Wars Logo Clássico Amarelo - Preta",
+            "descricao": "Camiseta casual preta com a marca clássica de Star Wars impressa em amarelo no peito. Tecido leve, macio e durável.",
+            "valor": 59.9,
+            "valor_antigo": 74.9,
+            "imagem": "c5340ede18859972.jpg",
+            "criado": 1792152208
+        },
+        {
+            "id": "cf0cf1cbeae9",
+            "categoria": "acessorios",
+            "nome": "Luminária de Mesa Acrílico LED 3D - Máscara Batman",
+            "descricao": "Luminária decorativa com base preta e placa de acrílico gravada a laser no formato da máscara do Batman. Alimentação via cabo USB ou pilhas com troca de cores.",
+            "valor": 89.9,
+            "valor_antigo": 119.9,
+            "imagem": "be3ff28fdf4350e3.jpg",
+            "criado": 1792152291
+        },
+        {
+            "id": "8648bb4bf9f7",
+            "categoria": "acessorios",
+            "nome": "Mochila de Costas Juvenil Super Mario Bros - Luxcel",
+            "descricao": "Mochila escolar/urbana com compartimento principal amplo, bolso frontal com o logo do Mario e puxadores personalizados em zíper.",
+            "valor": 119.9,
+            "valor_antigo": 139.9,
+            "imagem": "73cc7c3d88307146.jpg",
+            "criado": 1792152420
+        },
+        {
+            "id": "cc031374b165",
+            "categoria": "acessorios",
+            "nome": "Carteira Gamer de Couro Sintético PlayStation - Design Controle PS4",
+            "descricao": "Carteira dobrável com textura em relevo simulando os botões geométricos do controle do PlayStation. Possui divisórias para cartões e notas.",
+            "valor": 59.9,
+            "valor_antigo": null,
+            "imagem": "b7388271d3b9e5e0.jpg",
+            "criado": 1792152463
+        },
+        {
+            "id": "ed3e36baa9bd",
+            "categoria": "pokemon",
+            "nome": "Box Pokémon Estampa Ilustrada - Coleção Treinador Avançado (Copag)",
+            "descricao": "Conjunto oficial contendo pacotes de booster, protetores de cartas (sleeves), dados contadores de dano, marcadores de condição e caixa organizadora temática.",
+            "valor": 299.9,
+            "valor_antigo": 349.9,
+            "imagem": "c1e2851580d96b1d.jpg",
+            "criado": 1792152526
+        },
+        {
+            "id": "52c1c80117bb",
+            "categoria": "pokemon",
+            "nome": "Boneco Pokémon Epic Battle Figure Articulado - Dragonite 28cm",
+            "descricao": "Figura de ação de grande porte com articulações nos braços, pernas e asas. Produto oficial licenciado Wicked Cool Toys / Jazwares.",
+            "valor": 219.9,
+            "valor_antigo": 259.9,
+            "imagem": "2a1205b3b0d8f36c.jpg",
+            "criado": 1792152611
+        },
+        {
+            "id": "e16476440ea5",
+            "categoria": "pokemon",
+            "nome": "Luminária Globo Bola de Cristal Pokebola LED 3D - Pokémon",
+            "descricao": "Esfera de cristal gravada a laser com imagem 3D em seu interior e base ilumina com LEDs coloridos em efeito degradê.",
+            "valor": 105.4,
+            "valor_antigo": null,
+            "imagem": "3db463d3133b5e34.jpg",
+            "criado": 1792152702
+        },
+        {
+            "id": "eef69f3370cf",
+            "categoria": "funko-pop",
+            "nome": "Funko Pop! Animation Naruto Shippuden - Naruto Sage Mode #185 (Special Edition)",
+            "descricao": "Figura de vinil colecionável do Naruto no Modo Sábio com capa vermelha, olhos característicos e pergaminho nas costas.",
+            "valor": 149.9,
+            "valor_antigo": 189.9,
+            "imagem": "7b9f04ac278e9d62.jpg",
+            "criado": 1792154429
+        },
+        {
+            "id": "ddfdab2eb921",
+            "categoria": "funko-pop",
+            "nome": "Funko Pop! Games Pokémon - Pikachu #353 (Silver Metallic Edition)",
+            "descricao": "Figura de vinil com acabamento metálico prateado lançado em comemoração aos 25 anos da franquia Pokémon.",
+            "valor": 149.9,
+            "valor_antigo": null,
+            "imagem": "8db5f94c9e064ff1.jpg",
+            "criado": 1792154483
+        },
+        {
+            "id": "a07c0940bd4d",
+            "categoria": "funko-pop",
+            "nome": "Funko Pop! Animation Jujutsu Kaisen - Satoru Gojo #1114",
+            "descricao": "Figura em vinil de Satoru Gojo trajando seu uniforme escuro e venda nos olhos característica do anime Jujutsu Kaisen.",
+            "valor": 119.9,
+            "valor_antigo": 159.9,
+            "imagem": "96d38f047affbbad.jpg",
+            "criado": 1792154571
+        },
+        {
+            "id": "2cf9d06885a1",
+            "categoria": "action-figures",
+            "nome": "Action Figure S.H.Figuarts Demon Slayer - Tanjiro Kamado (Bandai)",
+            "descricao": "Figura articulada colecionável da Bandai Tamashii Nations. Acompanha feições intercambiáveis, espada Nichirin com bainha e mãos extras.",
+            "valor": 329.9,
+            "valor_antigo": 449.9,
+            "imagem": "962d4d8d735723e6.jpg",
+            "criado": 1792154651
+        }
+    ]
+}

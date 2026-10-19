@@ -11,21 +11,16 @@ if (session_status() === PHP_SESSION_NONE) {
 
 require_once __DIR__ . '/includes/storage.php';
 
-/* Dados da loja (aparecem no topo, rodapé e página "Sobre") */
+
 const LOJA_NOME     = 'Los Pollos Geek';
 const LOJA_SLOGAN   = "One look, and you'll know.";
 const LOJA_TELEFONE = '+55 11 90800-8022';
 const LOJA_EMAIL    = 'Lospollosgeek@yahoo.com.br';
 
-/**
- * false = só entra no site quem fez login (como já era).
- * true  = qualquer pessoa pode ver os produtos; o login só é exigido para comprar.
- */
+
 const LOJA_PUBLICA = false;
 
 const ARQ_USUARIOS = DIR_DATA . '/usuarios.json';
-
-/** Conta administradora criada na primeira execução. TROQUE a senha após o primeiro acesso. */
 function usuarioAdminPadrao(): array
 {
     return [
@@ -69,8 +64,6 @@ function buscarUsuarioPorId(int $id): ?array
     }
     return null;
 }
-
-/** Cria o usuário e devolve false se o e-mail já existir (checagem feita dentro do lock). */
 function criarUsuario(string $nome, string $email, string $senha, bool $localizacao = false): bool
 {
     carregarUsuarios(); // garante o admin padrão antes de qualquer cadastro
@@ -98,8 +91,6 @@ function criarUsuario(string $nome, string $email, string $senha, bool $localiza
 
     return $criado;
 }
-
-/** Atualiza a permissão de localização do usuário (usada na página de perfil). */
 function atualizarLocalizacao(int $id, bool $permitir): bool
 {
     return json_atualizar(ARQ_USUARIOS, [], function (array $usuarios) use ($id, $permitir) {
